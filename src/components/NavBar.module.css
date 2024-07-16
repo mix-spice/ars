@@ -1,0 +1,211 @@
+.navbar { background-color: transparent; /* Semi-transparent black */padding: 10px 0; color: white; }
+
+.navbarContainer { display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    max-width: 1000px; /* Set the width of the container */ 
+    margin: auto; 
+    padding: 0 50px;
+    background-color: transparent; /* Ensure this is also transparent */
+
+}
+
+.navbarTitle h1 { margin: 0;
+    /* Adjust based on your design */ 
+    font-family: "Azeret-Mono-Bold" ; 
+
+    font-size: 20px;
+    color: #d4c7c1;
+    text-align: center;
+
+
+}
+
+.navbarTitle p { margin: 0;
+     font-size: 12.1px;
+      padding: auto; 
+      font-family: "Azeret-Mono-Light";
+
+      color: #d4c7c1;
+      text-align: center;
+}
+.navbarLinks { display: flex; 
+  justify-content: space-between; 
+  align-items: center;
+   width: 25%;
+    font-size: 13px; 
+   font-family: "Azeret-Mono-Regular"; 
+
+
+  }
+
+.link{   color: #d4c7c1; 
+    text-decoration: none; 
+    /* Set the color of the links to white / text-decoration: none; / Remove the underline */ }
+
+.socialLink{ color: white; text-decoration: none; /* Set the color of the links to white / text-decoration: none; / Remove the underline */ } 
+
+.socialLink img {
+
+    height: 20px; /* Adjust this value to match the size of your links */
+  }
+
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  
+  }
+  
+  .dropdown:hover .dropdownContent {
+    display: block; /* This will show the dropdownContent when hovering over .dropdown */
+  }
+  
+  .dropdownContent {
+    display: none;
+    position: absolute;
+    background-color: black;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    top: 100%; /* Positions the dropdown content right below the dropdown button */
+    left: 0; /* Aligns the dropdown content with the left edge of the dropdown button */
+ 
+  }
+  
+  .dropdownContent .dropdownItem {
+    color: #D4c7c1;
+    padding: 8px 12px;
+    text-decoration: none;
+    display: block;
+   
+   
+  }
+  
+  .dropdownContent .dropdownItem:hover {
+    background-color: transparent;
+  }
+  
+  /* Add this to ensure the dropdown does not disappear when hovered */
+  .dropdown:hover .dropdownContent {
+    display: block;
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .navbarContainer {
+      max-width: 525px;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center; 
+      width: 100%; /* Use full width for mobile for better utilization of space */
+      padding: 0 10px; /* Reduced padding */
+      background-color: transparent; 
+    }
+  
+    .navbarTitle h1 {
+      font-size: 13px; /* Slightly reduce the font size for mobile */
+    }
+  
+    .navbarTitle p {
+      font-size: 7.8px; /* Adjusted font size for readability on mobile */
+    }
+  
+    .navbarLinks {
+      width: auto; /* Auto width to only take necessary space */
+      padding: 0; /* Remove additional padding */
+      font-size: 12px; /* Smaller font size for links to fit better */
+      flex-grow: 0.4; /* Allows the navbarLinks to fill available space */
+      justify-content: space-around; /* Increases spacing between each link */
+   
+      
+    }
+
+    .socialLink img {
+      margin-left: 20%;
+      height: 12px; /* Adjust this value to match the size of your links */
+    }
+  
+  
+    .dropdownContent {
+      /* Adjust if needed, for example, to not overlap other elements */
+      min-width: 120px; /* Optional: Adjust dropdown width on mobile */
+    }
+
+  
+  }
+
+  @media only screen and (min-width: 2560px) and (max-width: 3024px) {
+    .navbarContainer {
+      width: 100%; /* Adjust this value as needed */
+     
+      max-width: 1400px;
+      padding: 0.5% 0; /* Adjust this value as needed */
+   
+    }
+
+
+    .navbarTitle h1 { margin: 0;
+      /* Adjust based on your design */ 
+      font-family: "Azeret-Mono-Bold" ; 
+  
+      
+      color: #d4c7c1;
+      text-align: center;
+  
+      font-size: 29px;
+  }
+  
+  .navbarTitle p { margin: 0;
+    font-size: 18px;
+        padding: auto; 
+        font-family: "Azeret-Mono-Light";
+  
+        color: #d4c7c1;
+        text-align: center;
+  
+  }
+  .navbarLinks { display: flex; justify-content: space-between; align-items: center; width: 25%; font-size: 20px; font-family: "Azeret-Mono-Regular"; padding-bottom: 1%;
+   padding-right: 0.6%; }
+  
+   .socialLink img {
+
+    height: 26px !important; /* Adjust this value to match the size of your links */
+  }
+
+  .dropdownContent .dropdownItem {
+    color: #D4c7c1;
+ 
+    text-decoration: none;
+    display: block;
+   
+   
+  }
+  
+  }
+
+
+  /*@media only screen and (min-width: 3024px) and (max-width: 3840px) {
+
+    .navbarContainer { display: flex; 
+      justify-content: space-between; 
+      align-items: center; 
+      width: 1800px; 
+      margin: auto; 
+      padding: 0 60px;
+      background-color: transparent; 
+      width: 60%;
+  
+  }
+
+    .navbarLinks { display: flex; justify-content: space-between; align-items: center; width: 28%; font-size: 20px; font-family: "Azeret-Mono-Regular"; padding-bottom: 1%;
+   
+    }
+
+    
+   .socialLink img {
+
+    height: 26px !important; 
+    margin-left: 40%;
+  } 
+  }
+  */ 

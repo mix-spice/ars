@@ -1,0 +1,357 @@
+* {
+  box-sizing: border-box; /* Ensures padding and borders are included in width/height calculations */
+}
+
+.mainContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* One column layout */
+  grid-template-rows: auto auto; /* Space for five rows */
+  row-gap: 40px;
+  align-items: center; /* Vertically aligns grid items in their cells */
+  justify-items: center; /* Horizontally centers grid items in their cells */
+  margin-top: 10px;
+  max-width: 900px; /* Maximum width of the grid */
+  margin: 0 auto; /* Centers the grid horizontally */
+  width: 100%; /* Makes the grid take up 100% of the .mainContent width */
+}
+
+.header {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+    display: flex;
+    margin-top: 3vh;
+ 
+  }
+  
+  h1 {
+    font-size: 20px; /* Adjust as needed */
+    text-align: center;
+      font-family: "Azeret-Mono-Light2";
+    color: #D4c7c1;
+    
+  }
+
+.photoGrid{
+    grid-column: 1/2;
+    grid-row: 2/3;
+    max-width: 450px;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: start; 
+    text-align: left;
+}
+
+.photoGrid img{
+    width: 375px;
+    height: auto;
+
+  max-width: 100%; /* Ensure the image doesn't exceed its container */
+  height: auto;
+  display: block;
+  margin: 0 auto; /* Auto margins for horizontal centering */
+}
+   
+
+
+.descriptionGrid {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Aligns all child items to the start of the flex container */
+  text-align: left; /* Aligns text to the left */
+  max-width: 450px;
+   
+
+}
+
+
+.paragraph {
+    font-size: 11px;  /* Text size as in the screenshot */
+    line-height: 1.4; /* Adjust line height for readability */
+    font-family: 'Azeret Mono', monospace;
+    color: #D4c7c1;
+    margin-bottom: 5%; /* Increase this value to add more space between paragraphs */
+    text-align: center; /* Add this line */
+
+    text-align: left;
+}
+
+.boldText {
+    font-weight: bold;
+}
+
+.buttonStyle {
+    background-color:#154C2E; /* Button color */
+    color:#D4c7c1; /* Text color */
+    border: none; /* Remove default button border */
+    padding: 10px 20px; /* Button size */
+    text-align: center; /* Center the text */
+    text-decoration: none; /* Remove default button text decoration */
+    display: inline-block;
+    font-size: 16px; /* Text size */
+    margin: 4px 2px;
+    cursor: pointer; /* Change cursor to pointer when hovering over the button */
+    border-radius: 4px; /* Rounded corners */
+    width: 100%;
+    margin-top: 25px;
+
+   
+   
+}
+
+.dot{
+  font-family: 'B612-Regular';
+}
+
+a {
+  pointer-events: auto; /* Ensure pointer events are enabled */
+  color: inherit; /* Optional: ensures link color is visible */
+
+}
+
+.emailLink {
+  grid-column: 1 / -1; /* Spans across all columns */
+  display: flex;
+  justify-content: flex-start !important; /* Aligns content to the start */
+  align-items: start !important; /* Centers content vertically */
+  text-align: center;
+
+  color: #D4c7c1;
+}
+
+
+.emailLink a {
+  font-size: 13px;
+  color: #D4c7c1; /* Ensures the link color matches the text color */
+ font-family: "Azeret-Mono-Regular";
+  text-decoration: none; /* No underline */
+}
+
+.emailLink a:hover {
+  text-decoration: underline; /* Adds underline on hover for better user experience */
+}
+
+.underline {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.bold{
+  font-weight: bold;
+}
+
+
+
+@media (max-width: 768px) {
+
+  
+  body {
+    background-image: url("../../images/bgPhone.webp") !important;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+  .mainContent {
+      grid-template-columns: 1fr; /* Single column layout */
+      grid-template-rows: auto auto auto; /* Adjust to only two rows since you want image and text */
+      row-gap: 20px; /* Space between your image and text */
+  }
+
+  .mainContent .header{
+      grid-row: 1/2;
+  }
+
+  .mainContent .header h1{
+      font-size: 12px;
+  }
+
+  .mainContent .photoGrid {
+      grid-row: 2/3; /* Ensure the photo grid is in the second row */
+      display: flex; /* Use flex to center the image */
+      justify-content: center; /* Center horizontally */
+      margin-top: 10px;
+  }
+  
+  .photoGrid img {
+      width: 70%; /* Make it full width of its container */
+      height: auto;
+
+  }
+
+  .descriptionGrid {
+      grid-row: 3/4; /* Ensure the description grid is in the third row */
+      grid-column: 1/2;
+      padding: 1rem; /* Adjust padding as needed */
+      max-width: 80%; /* Match the width of photoGrid img */
+   
+      margin: 0 36px;
+    }
+
+  .paragraph {
+      font-size: 10px; /* Adjust font size for better readability */
+      line-height: 1.6; /* Adjust line height for readability */
+      font-family: 'Azeret Mono', monospace;
+      color: #D4c7c1;
+      text-align: left; /* Keep text aligned to the left */
+      margin: 5px; /* Adjust margins to fit within the container */
+      text-indent: 20px; /* Indents the first line of each paragraph */
+  }
+
+  .buttonStyle {
+      font-size: 12px;
+      margin-top: 20px;
+      width: 100%; /* Allow the button to size according to its content */
+      margin-top: 15%;
+   
+  }
+
+  .emailLink {
+    grid-column: 1 / -1; /* Spans across all columns */
+    display: flex;
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    text-align: center;
+  
+    color: #D4c7c1;
+
+
+   
+   
+  }
+  
+}
+
+
+@media only screen and (min-width: 2560px) and (max-width: 3024px) {
+  .mainContent {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* One column layout */
+    grid-template-rows: auto auto; /* Space for five rows */
+    row-gap: 60px;
+    column-gap: 40px;
+    align-items: center; /* Vertically aligns grid items in their cells */
+    justify-items: center; /* Horizontally centers grid items in their cells */
+    margin-top: 10px;
+    max-width: 1400px; /* Maximum width of the grid */
+    margin: 0 auto; /* Centers the grid horizontally */
+    width: 100%; /* Makes the grid take up 100% of the .mainContent width */
+  }
+  
+  .header {
+      grid-column: 1 / 3;
+      grid-row: 1 / 2;
+      display: flex;
+      margin-top: 6vh;
+   
+    }
+    
+    h1 {
+      font-size: 30px; /* Adjust as needed */
+      text-align: center;
+        font-family: "Azeret-Mono-Light2";
+      color: #D4c7c1;
+      
+      
+    }
+  
+  .photoGrid{
+      grid-column: 1/2;
+      grid-row: 2/3;
+      max-width: 1000px;
+      width: 100%;
+  
+      display: flex;
+      flex-direction: column;
+      align-items: start; 
+      text-align: left;
+      margin-top: 3vh;
+  }
+  
+  .photoGrid img{
+      width: 680px;
+      height: auto;
+  
+    max-width: 100%; /* Ensure the image doesn't exceed its container */
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Auto margins for horizontal centering */
+  }
+     
+  
+  
+  .descriptionGrid {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Aligns all child items to the start of the flex container */
+    text-align: left; /* Aligns text to the left */
+    margin-top: 3vh;
+  
+      
+     
+      max-width: 100%;
+      max-width: 680px;
+     
+  
+  }
+  
+  
+  .paragraph {
+      font-size: 18px;  /* Text size as in the screenshot */
+      line-height: 1.8; /* Adjust line height for readability */
+      font-family: 'Azeret Mono', monospace;
+      color: #D4c7c1;
+      margin-bottom: 25px; /* Increase this value to add more space between paragraphs */
+      text-align: center; /* Add this line */
+  
+      text-align: left;
+  }
+  
+  .boldText {
+      font-weight: bold;
+  }
+  
+  .buttonStyle {
+      background-color:#154C2E; /* Button color */
+      color:#D4c7c1; /* Text color */
+      border: none; /* Remove default button border */
+      padding: 10px 20px; /* Button size */
+      text-align: center; /* Center the text */
+      text-decoration: none; /* Remove default button text decoration */
+      display: inline-block;
+      font-size: 28px; /* Text size */
+      margin: 4px 2px;
+      cursor: pointer; /* Change cursor to pointer when hovering over the button */
+      border-radius: 4px; /* Rounded corners */
+     width: 100%;
+      margin-top: 25px;
+     
+     
+  }
+  
+  a {
+    pointer-events: auto; /* Ensure pointer events are enabled */
+    color: inherit; /* Optional: ensures link color is visible */
+  
+  }
+  
+  .emailLink {
+    grid-column: 1 / -1; /* Spans across all columns */
+    display: flex;
+    justify-content: flex-start !important; /* Aligns content to the start */
+    align-items: start !important; /* Centers content vertically */
+    text-align: center;
+  
+    color: #D4c7c1;
+  }
+  
+  
+  .emailLink a {
+    font-size: 20px;
+    color: #D4c7c1; /* Ensures the link color matches the text color */
+   font-family: "Azeret-Mono-Regular";
+    text-decoration: none; /* No underline */
+  }
+  
+ 
+}

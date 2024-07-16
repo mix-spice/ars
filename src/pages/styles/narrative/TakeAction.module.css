@@ -1,0 +1,593 @@
+body{
+
+    background-image: url("../../../images/bg.webp");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+h1, h2, p {
+        margin: 0;
+}
+* {
+    box-sizing: border-box; /* Ensures padding and borders are included in width/height calculations */
+}
+
+.mainContent {
+    display: grid;
+    grid-template-columns: 1fr; /* One column layout */
+    grid-template-rows: auto auto auto auto auto; /* Space for five rows */
+    row-gap: 30px;
+    column-gap: 60px;
+    align-items: center; /* Vertically aligns grid items in their cells */
+    justify-items: center; /* Horizontally centers grid items in their cells */
+    margin-top: 10px;
+    max-width: 900px; /* Maximum width of the grid */
+    margin: 0 auto; /* Centers the grid horizontally */
+    width: 100%; /* Makes the grid take up 100% of the .mainContent width */
+}
+
+.project{
+    grid-row: 1/2;
+    display: grid;
+    justify-items: center; /* This centers the content of each cell horizontally */
+    align-items: center; /* This centers the content of each cell vertically */
+    margin-top: 2vh;
+
+
+}
+
+.project .iframe{
+    width: 900px !important;
+    height: 500px;
+
+    display: block;
+    object-fit: cover;
+}
+
+.title{
+    grid-row:2/3;
+}
+
+.projectTitle{
+    text-align: center;
+    font-size: 16px;
+    font-family: "Azeret-Mono";
+    color: #d4c7c1;
+
+}
+
+.projectDescription {
+     grid-row: 3/4;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column; /* Stack paragraphs vertically */
+    justify-content: center;
+    text-align:left; /* Align text to the left */
+    border-radius: 15px; /* Rounded corners for the text background */
+ 
+}
+
+.projectDescription .paragraph{
+    font-size: 12px;
+    line-height: 1.6;
+    color: #d4c7c1;
+    font-family: "Azeret-Mono";
+    margin-top: 10px;
+
+
+}
+
+
+.creditsContainer{
+    grid-row: 4/5;
+    max-width: 900px;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: start; 
+    text-align: left; 
+    line-height: 4vh;
+  
+    }
+    .creditsTitle{
+        text-align: left;
+        font-size: 12px;
+        font-family: "Azeret-Mono";
+    
+    }
+    
+        .creditsList{
+            display: flex;
+            flex-direction: column;
+        }
+    
+        .creditItem{
+            font-weight: bold; /* makes the title bold */
+            margin-right: 10px; /* space between title and name */
+    
+        }
+        .creditTitle {
+    
+            color: #d4c7c1;
+            font-size: 12px;
+            text-align: left;
+            font-family: "Azeret-Mono" ;
+     
+        }
+          
+        .creditName {
+     
+        color: #d4c7c1;
+        text-align: left; /* Creates a nice gutter between titles and names */
+        font-family: "Azeret-Mono" ;
+        font-size: 12px;
+        font-weight: 400;
+        text-align: left;
+
+    
+        
+        }
+        
+    
+       .creditName  h2{
+            display: inline-block;
+            font-family: "Azeret-Mono" ;
+            font-weight: bold;
+        }
+     
+    
+      
+.photo-grid {
+    max-width: 900px !important; /* or the width of your content area */
+    margin: auto;
+  }
+  
+  .photo-row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px; /* Space between rows */
+  }
+  
+  .photo {
+    width: 33.333%; /* Divide by three for three in a row */
+    object-fit: cover; /* This will ensure the images cover the area without stretching */
+    padding: 5px; /* This creates a small gap between images */
+  }
+  
+
+  .photoSection{
+    display: grid;
+    grid-row:5/6;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    align-items: center;
+    row-gap: 10px;
+    column-gap: 10px;
+  
+  }
+
+  .photoSection img{
+    width: 300px;
+    height: auto;
+  }
+
+  .rightArrow {
+    position: fixed; /* Change from absolute to fixed to make it visible on all page scrolls */
+    top: 50%;
+    right: 9%;
+    transform: translateY(-50%);
+    font-size: 1.5rem; /* Increase the size for better visibility */
+    color: #d4c7c1; /* Ensure the color contrasts well with the background */
+    cursor: pointer;
+    z-index: 1000; /* Make sure it's above most other elements */
+}
+
+.leftArrow{
+    position: fixed; /* Change from absolute to fixed to make it visible on all page scrolls */
+    top: 50%;
+    left: 9%;
+    transform: translateY(-50%);
+    font-size: 1.5rem; /* Increase the size for better visibility */
+    color: #d4c7c1; /* Ensure the color contrasts well with the background */
+    cursor: pointer;
+    z-index: 1000; /* Make sure it's above most other elements */
+}
+  @media only screen and (max-width: 768px) {
+
+    body {
+        background-image: url("../../../images/bgPhone.webp") !important;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+    .mainContent {
+        grid-template-columns: 1fr; /* Stacks everything in one column */
+        max-width: 100%; /* Use the full width of the screen */
+   
+        margin-top: 20px;
+        row-gap: 20px;
+        column-gap: 0px;
+        position: relative;
+        max-width:525px;
+    }
+
+    .project img, .photoSection img {
+        width: 100%; /* Make images responsive */
+        height: auto; /* Maintain aspect ratio */
+        max-width: none; /* Override any max-width set previously */
+    }
+
+    .project .iframe{
+        width: 350px !important;
+        height: auto;
+        display: block;
+        object-fit: cover;
+    }
+
+    .projectDescription {
+        grid-row: 3/4;
+       max-width: 350px;
+       display: flex;
+       flex-direction: column; /* Stack paragraphs vertically */
+       justify-content: center;
+       text-align:left; /* Align text to the left */
+       border-radius: 5px; /* Rounded corners for the text background */
+   }
+   
+   .projectDescription .paragraph{
+       font-size: 8px;
+       line-height: 1.6;
+       color: #d4c7c1;
+       font-family: "Azeret-Mono";
+       margin-top: 10px;
+   
+   }
+
+   .projectTitle{
+    text-align: center;
+    font-size: 10px;
+    font-family: "Azeret-Mono";
+    color: #d4c7c1;
+
+}
+   
+
+    .creditsContainer {
+   
+        line-height: 2vh; /* Adjust this value to your preference */
+    
+    }
+
+
+
+    .projectDescription, .creditsContainer {
+        margin-left: auto; /* Center-align the project description */
+        margin-right: auto;
+        max-width: 100%; /* Allow it to take full width */
+        text-align: left;
+        max-width: 350px;
+   
+    }
+
+
+
+               
+        .creditName {
+     
+            color: #d4c7c1;
+            text-align: left; /* Creates a nice gutter between titles and names */
+            font-family: "Azeret-Mono" ;
+            font-size: 12px;
+            font-weight: 400;
+            text-align: left;
+            margin-left: 0vh;
+        
+            
+            }
+    .creditsContainer, .projectDescription .paragraph, .creditsList, .creditItem, .creditTitle, .creditName {
+        font-size: 8px; /* Adjust font size for readability */
+    }
+
+    .photoSection {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 30px;
+    }
+
+    .photoSection img{
+        width: 358px;
+        height: auto;
+      }
+
+     
+    .leftArrow, .rightArrow {
+        position: absolute; /* Positions the arrows absolutely relative to the nearest positioned ancestor (mainContent) */
+        top: -12.5px; /* Places them near the top of mainContent */
+        transform: translateY(0); /* Neutralizes any previous transformations */
+        z-index: 100; /* Keeps them above other content */
+        font-size: 0.8rem;
+    }
+
+    .leftArrow{
+        left: 15px;
+    }
+
+    .rightArrow{
+        right: 15px;
+    }
+}
+
+@media only screen and (min-width: 2560px) and (max-width: 3024px) {
+
+    .mainContent {
+
+        align-items: center; /* Vertically aligns grid items in their cells */
+        justify-items: center; /* Horizontally centers grid items in their cells */
+        margin-top: 10px;
+        max-width: 1400px; /* Maximum width of the grid */
+        margin: 0 auto; /* Centers the grid horizontally */
+        width: 100%; /* Makes the grid take up 100% of the .mainContent width */
+    }
+
+    .project .iframe{
+    width: 1400px !important;
+    height: 828px;
+
+    display: block;
+    object-fit: cover;
+}
+
+
+
+.projectTitle{
+    text-align: center;
+    font-size: 20px;
+    font-family: "Azeret-Mono";
+    color: #d4c7c1;
+
+}
+   
+
+.projectDescription {
+     grid-row: 3/4;
+    max-width: 1400px;
+    display: flex;
+    flex-direction: column; /* Stack paragraphs vertically */
+    justify-content: center;
+    text-align:left; /* Align text to the left */
+
+}
+
+.projectDescription .paragraph{
+    font-size: 14px;
+    line-height: 1.6;
+    color: #d4c7c1;
+    font-family: "Azeret-Mono";
+    margin-top: 10px;
+
+
+}
+.creditsContainer{
+    grid-row: 4/5;
+    max-width: 1400px;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: start; 
+    text-align: left; 
+    line-height: 4vh;
+  
+    }
+         
+.creditName {
+     
+    color: #d4c7c1;
+    text-align: left; /* Creates a nice gutter between titles and names */
+    font-family: "Azeret-Mono" ;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: left;
+    line-height: 3vh;
+
+    
+    }
+
+    .photo-grid {
+        max-width: 1400px !important; /* or the width of your content area */
+        margin: auto;
+      }
+      
+      .photo-row {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10px; /* Space between rows */
+      }
+      
+      .photo {
+        width: 33.333%; /* Divide by three for three in a row */
+        object-fit: cover; /* This will ensure the images cover the area without stretching */
+        padding: 5px; /* This creates a small gap between images */
+      }
+      
+    
+      .photoSection{
+        display: grid;
+        grid-row:5/6;
+        grid-template-columns: auto auto auto;
+        justify-content: center;
+        align-items: center;
+        row-gap: 15px;
+        column-gap: 15px;
+      
+      }
+    
+      .photoSection img{
+        width:453px;
+        height: 250px;
+      }
+      .rightArrow {
+        position: fixed; /* Change from absolute to fixed to make it visible on all page scrolls */
+        top: 45%;
+        right: 13.5%;
+        transform: translateY(-50%);
+        font-size: 2.5rem; /* Increase the size for better visibility */
+        color: #d4c7c1; /* Ensure the color contrasts well with the background */
+        cursor: pointer;
+        z-index: 1000; /* Make sure it's above most other elements */
+    }
+    
+    .leftArrow{
+        position: fixed; /* Change from absolute to fixed to make it visible on all page scrolls */
+        top: 45%;
+        left: 13.5%;
+        transform: translateY(-50%);
+        font-size: 2.5rem; /* Increase the size for better visibility */
+        color: #d4c7c1; /* Ensure the color contrasts well with the background */
+        cursor: pointer;
+        z-index: 1000; /* Make sure it's above most other elements */
+    }
+
+  
+
+       
+}
+
+
+@media only screen and (min-width: 3024px) and (max-width: 3840px) {
+
+    .mainContent {
+
+        align-items: center; /* Vertically aligns grid items in their cells */
+        justify-items: center; /* Horizontally centers grid items in their cells */
+        margin-top: 10px;
+        max-width: 1700px; /* Maximum width of the grid */
+        margin: 0 auto; /* Centers the grid horizontally */
+        width: 100%; /* Makes the grid take up 100% of the .mainContent width */
+    }
+
+
+    .project .iframe{
+        width: 1700px !important;
+        height: auto;
+    
+        display: block;
+        object-fit: cover;
+    }
+    
+    
+    
+    .projectTitle{
+        text-align: center;
+        font-size: 30px;
+        font-family: "Azeret-Mono";
+        color: #d4c7c1;
+    
+    }
+       
+    
+    .projectDescription {
+         grid-row: 3/4;
+        max-width: 1700px;
+        display: flex;
+        flex-direction: column; /* Stack paragraphs vertically */
+        justify-content: center;
+        text-align:left; /* Align text to the left */
+    
+    }
+    
+    .projectDescription .paragraph{
+        font-size: 20px;
+        line-height: 1.6;
+        color: #d4c7c1;
+        font-family: "Azeret-Mono";
+        margin-top: 10px;
+    
+    
+    }
+    .creditsContainer{
+        grid-row: 4/5;
+        max-width: 1700px;
+        width: 100%;
+    
+        display: flex;
+        flex-direction: column;
+        align-items: start; 
+        text-align: left; 
+        line-height: 4vh;
+      
+        }
+             
+    .creditName {
+         
+        color: #d4c7c1;
+        text-align: left; /* Creates a nice gutter between titles and names */
+        font-family: "Azeret-Mono" ;
+        font-size: 20px;
+        font-weight: 400;
+        text-align: left;
+        line-height: 3vh;
+    
+        
+        }
+    
+        .photo-grid {
+            max-width: 1400px !important; /* or the width of your content area */
+            margin: auto;
+          }
+          
+          .photo-row {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10px; /* Space between rows */
+          }
+          
+          .photo {
+            width: 33.333%; /* Divide by three for three in a row */
+            object-fit: cover; /* This will ensure the images cover the area without stretching */
+            padding: 5px; /* This creates a small gap between images */
+          }
+          
+        
+          .photoSection{
+            display: grid;
+            grid-row:5/6;
+            grid-template-columns: auto auto auto;
+            justify-content: center;
+            align-items: center;
+            row-gap: 15px;
+            column-gap: 15px;
+          
+          }
+        
+          .photoSection img{
+            width: 600px;
+            height: auto;
+          }
+          .rightArrow {
+            position: fixed; /* Change from absolute to fixed to make it visible on all page scrolls */
+            top: 45%;
+            right: 13.5%;
+            transform: translateY(-50%);
+            font-size: 2.5rem; /* Increase the size for better visibility */
+            color: #d4c7c1; /* Ensure the color contrasts well with the background */
+            cursor: pointer;
+            z-index: 1000; /* Make sure it's above most other elements */
+        }
+        
+        .leftArrow{
+            position: fixed; /* Change from absolute to fixed to make it visible on all page scrolls */
+            top: 45%;
+            left: 13.5%;
+            transform: translateY(-50%);
+            font-size: 2.5rem; /* Increase the size for better visibility */
+            color: #d4c7c1; /* Ensure the color contrasts well with the background */
+            cursor: pointer;
+            z-index: 1000; /* Make sure it's above most other elements */
+        }
+    
+
+}

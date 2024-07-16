@@ -1,0 +1,84 @@
+.divider{
+   margin-top: -2%;
+}
+
+@media only screen and (max-width: 768px) {
+
+  
+
+   body {
+       background-image: url("../../images/bgPhone.webp");
+       background-repeat: no-repeat;
+       background-attachment: fixed;
+       background-size: cover;
+   }
+
+   .mainContent {
+       display: grid;
+       grid-template-columns: 1fr;
+       grid-template-rows: auto auto auto;
+       row-gap: 20px;
+       align-items: center;
+       justify-content: center;
+       margin-top: 10px;
+       max-width: 525px; /* Adjust to fit content within smaller screens */
+
+   }
+
+   .title h1{
+       font-family: "Azeret-Mono-Light";
+       font-size: 12px;
+       font-style: normal;
+       font-weight: 400;
+       line-height: normal;
+       text-align: center;
+
+    
+       color: #d4c7c1;
+    
+   
+   }
+
+   .title p {
+       font-size: 12px; /* Adjusted for mobile - example size */
+       /* Ensure other properties like font-family are applied if needed */
+   }
+
+   .projects {
+       display: flex;
+       flex-direction: column;
+       align-items: center; /* Centers child elements horizontally */
+       justify-content: center; /* Centers child elements vertically */
+       margin-top: 10px;
+       max-width: 525px; /* Add this line */
+       margin-left: auto; /* Add this line */
+       margin-right: auto; /* Add this line */
+   }
+
+   .project1, .project2, .project3, .project4, .project5, .project6, .project7 {
+       justify-content: center;
+       justify-self: center;
+
+   }
+
+   .project1 img, .project2 img, .project3 img, .project4 img, .project5 img, .project6 img, .project7 img {
+       width: 300px !important;
+       height: auto;
+
+   }
+
+   .project1 p, .project2 p, .project3 p, .project4 p, .project5 p, .project6 p, .project7 p{
+       text-align: center;
+       color: #d4c7c1;
+       font-family: "SpaceMono-Regular";
+       font-size: 10px; /* Ensured font size adjustment */
+   }
+
+   .project2 img, .project3 img, .project4 img{
+       width: 300px; /* Make images responsive */
+       height: 160px; /* Maintain aspect ratio */
+   }
+
+
+   }
+

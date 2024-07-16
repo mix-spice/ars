@@ -1,0 +1,241 @@
+body{
+
+    background-color: #000000;
+ 
+}
+h1, h2, p {
+        margin: 0;
+}
+* {
+    box-sizing: border-box; /* Ensures padding and borders are included in width/height calculations */
+  }
+  
+  .mainContent {
+    display: grid;
+    grid-template-columns: 1fr; /* One column layout */
+    grid-template-rows: auto auto; /* Space for five rows */
+    row-gap: 40px;
+    align-items: center; /* Vertically aligns grid items in their cells */
+    justify-items: center; /* Horizontally centers grid items in their cells */
+    margin-top: 10px;
+    max-width: 900px; /* Maximum width of the grid */
+    margin-inline:auto;
+    margin: 0 auto; /* Centers the grid horizontally */
+    width: 100%; /* Makes the grid take up 100% of the .mainContent width */
+  }
+
+
+.title{
+    grid-row: 1/2;
+    grid-column: 1/3;
+    
+
+
+   
+}
+
+.title h1{
+    font-family: "Azeret-Mono-Light2";
+    font-size: 20px;
+    font-style:normal;
+   
+    line-height: normal;
+    text-align: center;
+
+    margin-top: 3vh;
+    color: #d4c7c1;
+ 
+
+}
+
+.projects{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows:  auto auto;
+    row-gap: 50px;
+    column-gap: 50px;
+    align-items: center; /* Centers child elements vertically */
+    justify-content: center; /* Centers child elements horizontally */
+    margin-top: 10px;
+    max-width: 900px; /* Add this line */
+    margin-left: auto; /* Add this line */
+    margin-right: auto; /* Add this line */
+}
+.project1{
+    grid-row: 1/2;
+    grid-column: 1/2;    
+    justify-content: right;
+    justify-self: right;
+  
+}
+
+.project2{
+    grid-row: 1/2;
+    grid-column: 2/3;    
+    justify-content: left;
+    justify-self: left;
+}
+
+.project3{
+    grid-row: 2/3;
+    grid-column: 1/2;    
+    justify-content: right;
+    justify-self: right;
+}
+
+.project4{
+    grid-row: 2/3;
+    grid-column: 2/3;   
+    justify-content: left;
+    justify-self: left;
+}
+
+
+.project1 img, .project2 img, .project3 img, .project4  img, .project5  img, .project6  img, .project7  img, .project8  img {
+    width: 435px;
+    height: 220px;
+    display: block;
+    object-fit: cover;
+
+}
+
+
+.project1, .project2, .project3, .project4, .project5, .project6 {
+    position: relative;
+    /* ... existing styles ... */
+ 
+  }
+  
+   
+
+
+
+
+    .project1 img, .project2 img, .project3 img, .project4 img, .project5 img, .project6 img, .project7 img, .project8 img {
+        /* ... existing styles ... */
+        margin-bottom: 10px; /* Adjust as needed */
+    }
+    
+    .project1 p, .project2 p, .project3 p, .project4 p, .project5 p, .project6 p, .project7 p, .project8 p {
+        text-align: center;
+        color: #d4c7c1;
+        font: "SpaceMono-Regular";
+
+    }
+
+
+
+    @media (max-width: 768px) {
+
+        body {
+            background-image: url("../../../images/bgPhone.webp");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        .mainContent {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto auto;
+            row-gap: 20px;
+            align-items: center;
+            justify-content: center;
+            margin-top: 10px;
+            max-width: 525px; /* Adjust to fit content within smaller screens */
+     
+        }
+    
+        .title h1{
+            font-family: "Azeret-Mono-Light";
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            text-align: center;
+     
+         
+            color: #d4c7c1;
+         
+        
+        }
+    
+        .title p {
+            font-size: 12px; /* Adjusted for mobile - example size */
+            /* Ensure other properties like font-family are applied if needed */
+        }
+    
+        .projects {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centers child elements horizontally */
+            justify-content: center; /* Centers child elements vertically */
+            margin-top: 10px;
+            max-width: 525px; /* Add this line */
+            margin-left: auto; /* Add this line */
+            margin-right: auto; /* Add this line */
+        }
+
+        .project1, .project2, .project3, .project4, .project5, .project6, .project7 {
+            justify-content: center;
+            justify-self: center;
+     
+        }
+    
+        .project1 img, .project2 img, .project3 img, .project4 img, .project5 img, .project6 img, .project7 img {
+            width: 300px !important;
+            height: auto;
+   
+        }
+    
+        .project1 p, .project2 p, .project3 p, .project4 p, .project5 p, .project6 p, .project7 p{
+            text-align: center;
+            color: #d4c7c1;
+            font-family: "SpaceMono-Regular";
+            font-size: 10px; /* Ensured font size adjustment */
+        }
+
+        .project2 img, .project3 img, .project4 img{
+            width: 300px; /* Make images responsive */
+            height: 160px; /* Maintain aspect ratio */
+        }
+
+
+        }
+
+    
+    @media only screen and (min-width: 2560px) and (max-width: 3024px) {
+        .mainContent {
+            max-width: 1400px;
+            margin-top: 50px;
+        
+        }
+    
+        .title h1 {
+            font-size: 30px; /* Adjust as needed */
+        }
+    
+        .projects {
+            max-width: 1400px;
+            column-gap: 80px;
+            row-gap: 80px;
+            margin-top: 100px;
+        }
+    
+        .project1 img, .project2 img, .project3 img, .project4 img {
+            width: 670px; /* Adjust as needed */
+            height: 376px; /* Adjust as needed */
+        }
+    
+        .project1 p, .project2 p, .project3 p, .project4 p, .project5 p, .project6 p, .project7 p, .project8 p {
+            font-size: 24px; /* Adjust as needed */
+        }
+    
+        .creditTitle {
+            font-size: 40px; /* Adjust as needed */
+        }
+    
+        .creditName {
+            font-size: 40px; /* Adjust as needed */
+        }
+    }

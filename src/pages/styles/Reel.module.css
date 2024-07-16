@@ -1,0 +1,267 @@
+
+* {
+
+  box-sizing: border-box; /* Ensures padding doesn't affect overall dimensions */
+}
+
+
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: 1fr; /* Only one column */
+    grid-template-rows: auto 1fr; /* Three rows */
+    row-gap: 25px; /* Space between rows */
+    justify-content: center; /* Center content horizontally */
+    margin-top: 10px;
+    max-width: 900px; /* Add this line */
+    margin-left: auto; /* Add this line */
+    margin-right: auto; /* Add this line */
+    margin: 0 auto; /* Centers the grid horizontally */
+    width: 100%; /* Makes the grid take up 100% of the .mainContent width */
+
+  }
+  
+  .title {
+    grid-row: 1 / 2; /* First row */
+    font-family: "Azeret-Mono-Light2"; 
+    font-size: 20px;
+    text-align: center; /* Center title text */
+    margin-top: 3vh;
+  }
+
+  .imageContainer{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:5%;
+  }
+  
+  .buttonStyle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);/* Add rotation */
+   
+    border: none;
+    width: 7%;
+    cursor: pointer;
+
+
+    z-index: 10;
+    cursor: pointer;
+    font-family: "Archivo-Extrabold";
+  }
+  .videoContainer1, .videoContainer2 {
+    
+    width: auto;
+    height: auto;
+    justify-self: center; /* Center video containers */
+    width: 360px !important;
+    height: auto;
+    display: block;
+    object-fit: cover;
+  }
+  
+
+  .filmNameContainer {
+    position: absolute; /* Position the film name at the bottom of the image */
+    bottom: 0;
+    left: 0;
+    width: 100%; /* Make the film name container full width of the image */
+    color: "#d4c7c1";
+    text-align: center;
+    padding: 5px;
+    border-radius: 0 0 5px 5px; /* Rounded corners at the bottom */
+    font-family: 'Azeret Mono', monospace;
+    font-size: 1rem;
+    margin-bottom: 3%;
+  }
+
+  .mobileImage {
+    width: auto;
+    height: auto;
+    justify-self: center; /* Center video containers */
+    width: 360px !important;
+    height: auto;
+    display: block;
+    object-fit: cover;
+  }
+  
+  .desktopImage {
+    width: auto;
+    height: auto;
+    justify-self: center; /* Center video containers */
+    width: 900px !important;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    margin: auto; /* Add this line */
+  }
+  
+  
+  
+
+@media (max-width: 768px) {
+  
+  body {
+    background-image: url("../../images/bgPhone.webp") !important;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+  .gridContainer {
+    grid-template-rows: auto auto; /* Adjust for smaller screens */
+    row-gap: 20px; /* Adjust for smaller screens */
+    justify-content: center; /* Center content horizontally */
+    align-items: center;
+    margin-top: 20px;
+
+  }
+
+  .title {
+    font-size: 12px; /* Adjust for smaller screens */
+  }
+
+  .videoContainer1, .videoContainer2 {
+    width: 300px; /* Take full width on smaller screens */
+    margin-top: 15px;
+  }
+
+  .videoContainer1, .videoContainer2 {
+    
+    width: auto;
+    height: auto;
+    justify-self: center; /* Center video containers */
+    width: 320px !important;
+    height: auto;
+    display: block;
+    object-fit: cover;
+  }
+
+  .imageContainer{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+  }
+  
+
+  .filmNameContainer {
+    position: absolute; /* Position the film name at the bottom of the image */
+    bottom: 0;
+    left: 0;
+    width: 100%; /* Make the film name container full width of the image */
+    color: "#d4c7c1";
+    text-align: center;
+    padding: 5px;
+    border-radius: 0 0 5px 5px; /* Rounded corners at the bottom */
+    font-family: 'Azeret Mono', monospace;
+    font-size: 0.7rem;
+    margin-bottom: 330px;
+    display: none;
+  }
+
+  .mobileImage {
+    width: auto;
+    height: auto;
+    justify-self: center; /* Center video containers */
+    width: 300px !important;
+    height: auto;
+    display: block;
+    object-fit: cover;
+  }
+  .buttonStyle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);/* Add rotation */
+   
+    border: none;
+    width: 14%;
+    cursor: pointer;
+
+
+    z-index: 10;
+    cursor: pointer;
+    font-family: "Archivo-Extrabold";
+  }
+  
+}
+
+
+@media only screen and (min-width: 2560px) and (max-width: 3024px) {
+
+  .gridContainer {
+
+    row-gap: 40px; /* Space between rows */
+    justify-content: center; /* Center content horizontally */
+    margin-top: 10px;
+    max-width: 1400px; /* Add this line */
+    margin-left: auto; /* Add this line */
+    margin-right: auto; /* Add this line */
+    margin: 0 auto; /* Centers the grid horizontally */
+    width: 100%; /* Makes the grid take up 100% of the .mainContent width */
+
+  }
+  
+  .title {
+    grid-row: 1 / 2; /* First row */
+    font-family: "Azeret-Mono-Light2"; 
+    font-size: 30px;
+    text-align: center; /* Center title text */
+    margin-top: 6.3vh;
+  }
+
+  .imageContainer{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 12.5%;
+  }
+  
+  .buttonStyle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);/* Add rotation */
+   
+    border: none;
+    width: 7%;
+    cursor: pointer;
+
+
+    z-index: 10;
+    cursor: pointer;
+    font-family: "Archivo-Extrabold";
+  }
+  .desktopImage {
+    width: auto;
+    height: auto;
+    justify-self: center; /* Center video containers */
+    width: 1400px !important;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    margin: auto; /* Add this line */
+  }
+
+  .filmNameContainer {
+    position: fixed; /* Change from absolute to fixed */
+    bottom: 0;
+    left: 0;
+    width: 100%; /* Make the film name container full width of the image */
+    color: "#d4c7c1";
+    text-align: center;
+    padding: 5px;
+    border-radius: 0 0 5px 5px; /* Rounded corners at the bottom */
+    font-family: 'Azeret Mono', monospace;
+    font-size: 2rem;
+    margin-bottom: 100px;
+    display:inline-block;
+    z-index: 1000; /* A high value to ensure it's on top */
+  }
+  
+}

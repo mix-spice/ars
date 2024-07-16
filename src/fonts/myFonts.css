@@ -1,0 +1,129 @@
+@font-face {
+    font-family: 'SpaceMono-Regular';
+    src: url('SpaceMono-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+
+  @font-face {
+    font-family: 'Archivo-Regular';
+    src: url('Archivo-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'SpaceGrotesk-Regular';
+    src: url('SpaceGrotesk-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  
+  @font-face {
+    font-family: 'SpaceGrotesk-Medium';
+    src: url('SpaceGrotesk-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Balboa-W01';
+    src: url('Balboa\ W01\ Cond.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Amika';
+    src: url('Amika.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Archivo-Extrabold';
+    src: url('ARCHIVO_EXPANDED-EXTRABOLD.TTF') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'VCR';
+    src: url('VCR.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+
+  @font-face {
+    font-family: 'Azeret-Mono';
+    src: url('AzeretMono-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+
+  
+  @font-face {
+    font-family: 'Azeret-Mono-Light';
+    src: url('AzeretMono-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+
+   
+  @font-face {
+    font-family: 'Azeret-Mono-Bold';
+    src: url('AzeretMono-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+
+   
+  @font-face {
+    font-family: 'Azeret-Mono-Regular';
+    src: url('AzeretMono-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+
+  @font-face {
+    font-family: 'Azeret-Mono-Light2';
+    src: url('AzeretMono-Light.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+
+  @font-face {
+    font-family: 'Azeret-Mono-Thin';
+    src: url('AzeretMono-Thin.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+
+  @font-face {
+    font-family: 'B612-Regular';
+    src: url('B612-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+
+

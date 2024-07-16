@@ -1,0 +1,84 @@
+.galleryContainer {
+
+  margin: 0 auto;
+ 
+  max-width: 930px;
+}
+
+.break-inside-avoid-column {
+  position: relative; /* Set position context for the absolute positioning of filmNameContainer */
+}
+
+.filmNameContainer {
+  position: fixed; /* Change from absolute to fixed */
+  bottom: 0;
+  left: 0;
+  width: 100%; /* Make the film name container full width of the image */
+  color: "#d4c7c1";
+  text-align: center;
+  padding: 5px;
+  border-radius: 0 0 5px 5px; /* Rounded corners at the bottom */
+  font-family: 'Azeret Mono', monospace;
+  font-size: 1rem;
+  margin-bottom:1.5%;
+  display:inline-block;
+  z-index: 1000; /* A high value to ensure it's on top */
+}
+
+/* Add a margin-bottom to your image elements to make space for the film name container */
+.gallery img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 30px; /* Height of your filmNameContainer plus some extra space */
+}
+
+
+
+@media only screen and (max-width: 768px) {
+
+  
+  body {
+    background-image: url("../../images/bgPhone.webp") !important;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+  .filmNameContainer {
+    position: fixed; /* Change from absolute to fixed */
+    bottom: 0;
+    left: 0;
+    width: 100%; /* Make the film name container full width of the image */
+    color: "#d4c7c1";
+    text-align: center;
+    padding: 5px;
+    border-radius: 0 0 5px 5px; /* Rounded corners at the bottom */
+    font-family: 'Azeret Mono', monospace;
+    font-size: 0.7rem;
+    margin-bottom: 190px;
+    display: none;
+  }
+
+}
+
+
+@media only screen and (min-width: 2560px) and (max-width: 3024px) {
+  
+.filmNameContainer {
+  position: fixed; /* Change from absolute to fixed */
+  bottom: 0;
+  left: 0;
+  width: 100%; /* Make the film name container full width of the image */
+  color: "#d4c7c1";
+  text-align: center;
+  padding: 5px;
+  border-radius: 0 0 5px 5px; /* Rounded corners at the bottom */
+  font-family: 'Azeret Mono', monospace;
+  font-size: 2rem;
+  margin-bottom: 100px;
+  display:inline-block;
+  z-index: 1000; /* A high value to ensure it's on top */
+}
+}

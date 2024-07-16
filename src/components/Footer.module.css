@@ -1,0 +1,85 @@
+.footerContainer {
+    display: grid;
+    color: #d4c7c1;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    max-width: 1100px;
+    margin: 0 auto; /* Centers the footer container */
+    grid-template-rows: 1fr 1fr;
+    row-gap: 50px;
+    position: relative; /* Changed from absolute to relative */
+    bottom: 0;
+
+  }
+
+  .iconRow {
+    grid-column: 2/3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5px;
+    gap: 15px; /* Adjust the gap size as needed */
+  }
+  
+  .iconRow img {
+    width: 20px;
+    height: 20px;
+  }
+  
+ 
+  .textRow {
+    text-align: center; /* Center the text within the text row */
+    grid-column: 2/3;
+  }
+  
+  .textRow p {
+    margin: 0;
+    font-size: 10px;
+    padding-top: 10px;
+    display: inline-block;
+    font-family: "Azeret-Mono-Light";
+  }
+  
+  footer {
+    margin-bottom: 25px;
+    margin-top: 50px !important;
+  }
+
+
+  @media (max-width: 768px) {
+
+    .iconRow img {
+      width: 15px;
+      height: 15px;
+    }
+
+    .textRow p {
+      margin: 0;
+      font-size: 8px;
+      padding-top: 8px;
+      display: inline-block;
+      font-family: "Azeret-Mono-Light";
+    }
+  }
+
+  @media only screen and (min-width: 2560px) and (max-width: 3024px) {
+  .footerContainer {
+    max-width: 1400px; /* Adjust maximum width for larger screens */
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; /* Adjust column proportions if needed */
+
+}
+
+.iconRow img {
+    width: 26px; /* Increase icon size */
+    height: auto; /* Increase icon size */
+}
+
+.textRow p {
+    font-size: 16px; /* Increase text size */
+    padding-top: 20px; /* Increase padding top */
+}
+
+footer {
+    margin-top: 80px; /* Increase top margin */
+    margin-bottom: 50px; /* Increase bottom margin */
+}
+}
